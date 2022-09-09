@@ -11,7 +11,7 @@ async function main() {
 
   const results = await circulationRepo.loadData(circulationData);
   const admin = client.db(dbName).admin();
-  console.log(results.insertedCount);
+  console.log(results.insertedCount, results.ops);
   // console.log(await admin.serverStatus());
   console.log(await admin.listDatabases());
 }
